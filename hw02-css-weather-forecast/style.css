@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    list-style-type: none;
+    list-style-position: outside;
+    transition: all .1s ease-in;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    /*font-weight: 200;*/
+    box-sizing: border-box;
+
+}
+body{
+    /*padding: 1px;*/
+    border: 15px solid #2b81ac;
+    background: #2b81ac;
+}
+main{
+    /*position: absolute;*/
+    /*left: 15px;*/
+    /*right: 15px;*/
+    /*top: 15px;*/
+    /*bottom: 15px;*/
+    background: #3399cc;
+    padding: 25px;
+}
+section{
+    width: 786px;
+    margin: 20px auto;
+}
+h1,
+h1 *{
+    font-size: 24px;
+}
+ul{
+    width: 780px;
+    height: 480px;
+    margin: 20px 0 20px 0;
+    background: #ffffff;
+    padding: 3px;
+    border: 3px solid #ffffff;
+    font-size: 0;
+}
+li{
+    display: inline-block;
+    /*box-sizing: border-box;*/
+    width: 25%;
+    height: 25%;
+    /*line-height: 120px;*/
+    background: #3399cc;
+    border: 2px solid #ffffff;
+    /*padding: 20px;*/
+    text-align: center;
+    /*margin: 2px;*/
+}
+li:nth-child(1){
+    width: 50%;
+}
+li:nth-child(2){
+    background: #33cccc;
+}
+li:nth-child(3){
+    background: #986598;
+}
+li:nth-child(4){
+    background: #c24747;
+}
+li:nth-child(5){
+    background: #e2674a;
+}
+li:nth-child(6){
+    background: #ffcc66;
+}
+li:nth-child(7){
+    background: #99cc99;
+}
+li:nth-child(8){
+    background: #669999;
+}
+li:nth-child(9){
+    background: #cc6699;
+    width: 50%;
+}
+li:nth-child(10){
+    background: #339966;
+}
+li:nth-child(11){
+    background: #666699;
+    width: 100%;
+}
+li > div{
+    /*display: inline-block;*/
+    vertical-align: middle;
+}
+.weather{
+    opacity: .75;
+
+}
+li > div:before{
+    content: "";
+    display: inline-block;
+    height: 60px;
+    border: 1px solid transparent;
+    vertical-align: middle;
+}
+.weather + div + div{
+    line-height: 28px;
+}
+.wi{
+    font-size: 24px;
+}
+ul:hover li{
+    opacity: .5;
+}
+ul:hover li:hover{
+    opacity: 1;
+}
+section > div{
+    font-size: 18px;
+}
