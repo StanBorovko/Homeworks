@@ -6,12 +6,16 @@ html{
     color: #f2f2f2;
     background: #3b3f45;
 }
+body{
+    margin: 0;
+}
 header{
     color: #eb7e7f;
     text-align: center;
     background: #4a4f56;
     padding: 20px 0 5px;
-    margin: -10px -10px 0 -10px;
+    margin: 0;
+    /*margin: -10px -10px 0 -10px;*/
 }
 h1{
     font-size: 24px;
@@ -37,7 +41,7 @@ li{
     line-height: 30px;
 }
 li:nth-child(2n){
-    background: #7f7b92;
+    background: #7a7593;
 }
 li:hover{
     background: #625e77;
@@ -55,6 +59,9 @@ li .small:after{
     cursor: pointer;
     width: 16px;
     height: 16px;
+}
+[type=checkbox]:hover{
+    transform: scale(1.25);
 }
 [type=checkbox]:checked + label,
 [type=checkbox]:checked + label *{
