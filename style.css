@@ -35,5 +35,13 @@ li:hover{
     transform: scale(1.01);
 }
 a{
-    color: #3d0c02;
+    color: #3d0c02;p5
+}
+a img{
+    width: 75px;
+    height: 35px;
+    border: 3px solid white;
+    border-radius: 5px;
+    vertical-align: middle;
+    margin-right: 5px;
 }

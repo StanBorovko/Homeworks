@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600i,900|Roboto:300,400,700,900');
+* {
+            padding:          0;
+            margin:           0;
+            border:           0;
+            font-size:        18px;
+            color:            #303030;
+            background-color: transparent;
+            text-decoration:  none;
+            list-style-type:  none;
+            transition:       all .1s ease-in;
+            font-family:      Raleway, sans-serif;
+            font-weight:      400;
+    -webkit-box-sizing:       border-box;
+       -moz-box-sizing:       border-box;
+            box-sizing:       border-box;
+}
+a:hover,
+.recent > div > a:hover{
+    color:       #c10011;
+    text-shadow: 0 0 1px #c10011;
+}
+html{
+    background: #eeeeee;
+}
+main{
+    width:  1200px;
+    margin: 25px auto;
+    background: radial-gradient(circle at 72% 14%, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 15%, rgba(255,255,255,0) 100%)
+}
+header *,
+section *,
+footer *{
+    display:        inline-block;
+    vertical-align: baseline;
+}
+h1{
+    font-size:   48px;
+    font-family: Roboto, sans-serif;
+    font-weight: 900;
+}
+nav{
+    margin-left: 569px;
+}
+nav ul{
+    text-align: right;
+    font-size:  0;
+}
+header li{
+    font-family: Roboto, sans-serif;
+    font-size:   18px;
+    font-weight: 400;
+    padding:     5px 20px;
+}
+header li:first-child{
+    padding-left: 0;
+}
+header li:last-child{
+    padding-right: 0;
+}
+.recent{
+    font-size:  0;
+    margin-top: 105px;
+}
+.recent > div{
+    width:          50%;
+    height:         491px;
+    vertical-align: top;
+}
+.recent > div{
+    text-align: right;
+}
+.recent > div:nth-child(2){
+    text-align:   left;
+    padding-left: 104px;
+}
+.recent > div:last-child{
+    width:  100%;
+    height: 85px;
+}
+.recent > div:last-child:before{
+    content: '';
+    display: inline-block;
+    height:  85px;
+    width:   1px;
+    border:  1px solid transparent;
+}
+.recent > div:last-child{
+    display:    inline-block;
+    text-align: center;
+}
+.recent > div > *{
+    font-size:   24px;
+    font-weight: 300;
+    line-height: 36px;
+    font-family: Roboto, sans-serif;
+}
+.recent > div > h4{
+    width:          100%;
+    font-size:      150px;
+    font-weight:    900;
+    line-height:    150px;
+    text-transform: uppercase;
+    word-wrap:      break-word;
+}
+.recent > div > a{
+    font-weight: 700;
+    color:       #e10011;
+}
+.featured{
+    font-size:  0;
+    margin-top: 100px;
+    padding: 114px 72px 72px;
+    background: #ffffff;
+    text-align: center;
+}
+h2{
+    font-size: 48px;
+    /*line-height: 150px;*/
+    font-weight: 900;
+    width: 100%;
+}
+.featured > div > div{
+    vertical-align: top;
+}
+.featured > div:first-of-type{
+    width: 100%;
+    height: 40px;
+}
+.featured > div:last-of-type{
+    width: 50%;
+    margin: 0 0 75px;
+}
+.featured > div > img{
+    margin: 10px;
+}
+.featured > ul{
+    width: 1056px;
+    height: 812px;
+    font-size: 0;
+}
+.featured > ul > li{
+    /*width: calc((100% - 36px) * 0.33);*/
+    /*width: 33%;*/
+    /*height: 50%;*/
+    margin: 36px;
+    border-radius: 5px;
+}
+.featured > ul > li:nth-child(1){
+    /*width: calc((100% - 36px) * 0.66);*/
+    /*width: 66%;*/
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+.featured > ul > li:nth-child(2){
+    margin-top: 0;
+    margin-right: 0;
+}
+.featured > ul > li:nth-child(3){
+    margin: 0;
+    /*border: 1px solid black;*/
+    height: 391px;
+    width: 326px;
+    background: #e10011;
+    padding: 260px 38px 42px;
+    vertical-align: bottom;
+}
+.featured > ul > li:nth-child(3) *{
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 36px;
+    font-family: Roboto, sans-serif;
+    font-weight: 900;
+    text-align: left;
+}
+.featured > ul > li:nth-child(3) span:last-child{
+    border-bottom: 5px solid #ffffff;
+    padding-bottom: 10px;
+}
+.featured > ul > li:nth-child(4){
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.featured > ul > li:nth-child(5){
+    margin: 0;
+}
+.subscribe{
+    text-align: center;
+    margin-top: 100px;
+}
+.subscribe > div{
+    width: 50%;
+    margin: 25px 0 35px;
+}
+.subscribe form{
+    display: block;
+    font-size: 0;
+}
+.subscribe [type=email]{
+    width: 500px;
+    height: 73px;
+    padding: 25px 30px;
+    border-radius: 36px 0 0 36px;
+    background: #ffffff;
+    color: #979797;
+    font-style: italic;
+    font-weight: 600;
+}
+.subscribe [type=submit]{
+    width: 210px;
+    height: 73px;
+    padding: 25px 55px;
+    border-radius: 0 36px 36px 0;
+    background: #e10011;
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+footer{
+    text-align: center;
+    margin-top: 111px;
+}
+footer > div{
+    display: block;
+    color: #aeaeae;
+    margin-top: 60px;
+}
+footer > div > span{
+    color: #303030;
+}
