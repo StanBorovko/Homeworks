@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel:400,700');
+
+* {
+            padding:         0;
+            margin:          0;
+            border:          0;
+            font-size:       18px;
+            color:           #c2c2c2;
+            background:      #f1f1f1;
+            text-decoration: none;
+            list-style-type: none;
+            transition:      all .1s ease-in;
+            font-family:     Arial, sans-serif;
+    -webkit-box-sizing:      border-box;
+       -moz-box-sizing:      border-box;
+            box-sizing:      border-box;
+}
+main{
+    width: 55%;
+    margin: 25px auto;
+}
+form,
+section,
+a{
+    font-size: 0;
+    /*border: 1px solid #000000;*/
+}
+input{
+    font-family: 'Cinzel', serif;
+    font-size: 76px;
+    font-weight: 700;
+    color: #ec5a62;
+    display: inline-block;
+    vertical-align: middle;
+    height: 65px;
+    opacity: .4;
+}
+/*input:-autofill,*/
+/*input:-autofill:hover,*/
+/*input:-autofill:focus,*/
+/*input:-webkit-autofill,*/
+/*input:-webkit-autofill:hover,*/
+/*input:-webkit-autofill:focus,*/
+/*input:-internal-autofill,*/
+/*input:-internal-autofill:hover,*/
+/*input:-internal-autofill:focus,*/
+/*input:-internal-autofill-selected{*/
+    /*color: #ec5a62 !important;*/
+/*}*/
+input:focus{
+    border: 0 transparent;
+    outline: none;
+    color: #ec5a62;
+    opacity: .7;
+}
+input[type=text]{
+    width: calc(100% - 66px);
+}
+input[type=image]{
+    text-align: right;
+    opacity: .9;
+}
+section{
+    margin-top: 60px;
+}
+div{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100%/3 - 80px/3);
+    /*border: 1px solid #000000;*/
+    margin-right: 40px;
+}
+div:last-child{
+    margin-right: 0;
+}
+h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+div a{
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    margin: 3px 0;
+    border-radius: 5px;
+    white-space: nowrap;
+    background-color: rgba(118,117,128,0.05);
+    vertical-align: middle;
+}
+div a *{
+    background-color: transparent;
+    vertical-align: middle;
+}
+div a:hover{
+    background-color: rgba(118,117,128,0.1);
+    color: #ec5a62;
+}
+div a:hover *{
+    background-color: transparent;
+    color: #ec5a62;
+}
+div:first-child img{
+    border-radius: 50%;
+}
+span{
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    width: calc(100% - 50px - 2*3px);
+    margin-left: 10px;
+    white-space: normal;
+}
+img{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
