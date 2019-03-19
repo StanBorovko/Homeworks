@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign in form</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!--main>.window>.panel>form>label*2>input:radio^^.content>input:text*2+input:button^^div>a*2-->
+    <main>
+        <div class="window">
+            <div class="panel">
+                <form action="/" method="post" autocomplete="on">
+                    <input type="radio" name="nav" id="nav-sign-in" checked>
+                    <label for="nav-sign-in">
+                        <span>Sign in</span>
+                    </label>
+                    <input type="radio" name="nav" id="nav-join-us">
+                    <label for="nav-join-us">
+                        <span>Join us</span>
+                    </label>
+                    <div class="sign-in">
+                        <label>
+                            <span>Username</span>
+                            <input type="text" name="username" id="username" required>
+                        </label>
+                        <label>
+                            <span>Password</span>
+                            <input type="password" name="password" id="password" required>
+                        </label>
+                        <input type="checkbox" name="keep-me" id="keep-me" checked >
+                        <label for="keep-me">Keep me signed in</label>
+                        <input type="button" value="Sign in">
+                        <div>
+                            <a href="#">Forgot password</a>
+                            <a href="#">Create an account</a>
+                        </div>
+                    </div>
+                    <div class="join-us">
+                        <label>
+                            <span>Username</span>
+                            <input type="text" name="new-username" id="new-username" required>
+                        </label>
+                        <label>
+                            <span>E-mail</span>
+                            <input type="email" name="new-email" id="new-email" required>
+                        </label>
+                        <label>
+                            <span>Password</span>
+                            <input type="password" name="new-pass" id="new-pass" required>
+                        </label>
+                        <input type="button" value="Join us">
+                        <div>
+                            <input type="checkbox" name="agreement" id="agreement" checked required>
+                            <label for="agreement">I agree with all Terms of Service and
+                                the Privacy Policy</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
