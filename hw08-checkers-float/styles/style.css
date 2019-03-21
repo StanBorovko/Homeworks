@@ -1,0 +1,249 @@
+*{
+            padding:          0;
+            margin:           0;
+            border:           0;
+            font-size:        0;
+            color:            #e5b585;
+            background-color: transparent;
+            text-decoration:  none;
+            list-style-type:  none;
+            transition:       all .1s ease-in;
+            font-family:      'Times New Roman', serif;
+            font-weight:      700;
+    -webkit-box-sizing:       border-box;
+       -moz-box-sizing:       border-box;
+            box-sizing:       border-box;
+}
+.stone{
+    display: inline-block;
+    width: 70px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    left: 2px;
+    top: 13px;
+}
+.white{
+    background: #b9babc;
+    background: linear-gradient(to right, #fafafa 0%, #86878b 100%);
+    border: 2px solid #86878b;
+    box-shadow: 0 10px 0 #86878b, inset 0 0 5px #86878b;
+}
+.black{
+    background: #060606;
+    background: linear-gradient(to right, #919296 0%, #000000 100%);
+    border: 2px solid #060606;
+    box-shadow: 0 10px 0 #060606, inset 0 0 5px #060606;
+}
+.cell{
+    /*display: inline-block;*/
+    display: block;
+    width: 80px;
+}
+.cell:before{
+    content: '';
+    display: inline-block;
+    padding-top: 100%;
+}
+/********/
+.inner{
+    width: 1000px;
+    margin: 0 auto;
+}
+main{
+    /*background: #231100;*/
+    background: #592500;
+}
+.stack{
+    width: 960px;
+    height: 130px;
+    margin: 0 auto;
+    padding: 25px 0;
+    text-align: center;
+}
+.stack-row .cell{
+    /*display: inline-block;*/
+    width: 80px;
+    background: #e5b585;
+    border: 3px solid #cc9764;
+    position: relative;
+    float: left;
+}
+.stack-row .cell:before,
+.stack-row .cell:after{
+    content: '';
+    display: inline-block;
+    padding-top: 100%;
+    clear: both;
+}
+.stack-row .cell:first-child{
+    border-radius: 16px 0 0 16px;
+}
+.stack-row .cell:last-child{
+    border-radius: 0 16px 16px 0;
+}
+.board{
+    width: 83%;
+    margin: 0 auto;
+    background: #592500;
+    border-radius: 16px;
+    text-align: center;
+}
+.board *{
+    display: inline-block;
+    vertical-align: top;
+}
+.letters{
+    width: 100%;
+    clear: both;
+}
+.letters:last-child{
+    vertical-align: top;
+}
+/*.letters:last-child .cell{*/
+    /*position: relative;*/
+    /*top: -10px;*/
+    /*background: transparent;*/
+/*}*/
+.letters .cell{
+    font-size: 36px;
+}
+.letters .cell:before{
+    content: '';
+    display: inline-block;
+    padding-top: 50%;
+}
+.numbers{
+    width: 80px;
+    height: 650px;
+    margin: 0 10px 0 0;
+    float: left;
+}
+.numbers:nth-child(3){
+    margin: 0 0 0 10px;
+    float: right;
+}
+/*.numbers .cell{*/
+    /*position: relative;*/
+    /*top: -20px;*/
+/*}*/
+.numbers:nth-child(4) .cell{
+    text-align: left;
+}
+.letters .cell,
+.numbers .cell{
+    position: relative;
+}
+.letters .cell span,
+.numbers .cell span{
+    font-size: 36px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.numbers:nth-child(2) .cell span{
+    text-align: right;
+    top: 30px;
+}
+.numbers:nth-child(3) .cell span{
+    text-align: left;
+    top: 20px;
+}
+.field{
+    background: #e5b585;
+    border: 5px solid #cc9764;
+    border-radius: 16px;
+    width: 650px;
+    display: inline-block;
+}
+.board .cell{
+    background: #592500;
+}
+.field .cell{
+    float: left;
+}
+.row:nth-child(even) .cell{
+    margin-right: 80px;
+}
+.row:nth-child(odd) .cell{
+    margin-left: 80px;
+}
+.row:first-child .cell:last-child{
+    border-radius: 0 11px 0 0;
+}
+.row:last-child .cell:first-child{
+    border-radius: 0 0 0 11px;
+}
+/*******/
+.stack:first-child .in-game:nth-child(5) .stone{
+    left: -77px;
+    top: 170px;
+}
+.stack:first-child .in-game:nth-child(6) .stone{
+    left: -77px;
+    top: 250px;
+}
+.stack:first-child .in-game:nth-child(7) .stone{
+    left: -77px;
+    top: 170px;
+}
+.stack:first-child .in-game:nth-child(8) .stone{
+    left: -237px;
+    top: 410px;
+}
+.stack:first-child .in-game:nth-child(9) .stone{
+    left: -77px;
+    top: 170px;
+}
+.stack:first-child .in-game:nth-child(10) .stone{
+    left: -77px;
+    top: 250px;
+}
+.stack:first-child .in-game:nth-child(11) .stone{
+    left: -77px;
+    top: 170px;
+}
+.stack:first-child .in-game:nth-child(12) .stone{
+    left: -317px;
+    top: 490px;
+}
+.stack:last-child .in-game:nth-child(4) .stone{
+    left: -77px;
+    top: -148px;
+}
+.stack:last-child .in-game:nth-child(5) .stone{
+    left: -157px;
+    top: -468px;
+}
+.stack:last-child .in-game:nth-child(6) .stone{
+    left: -77px;
+    top: -148px;
+}
+.stack:last-child .in-game:nth-child(7) .stone{
+    left: -77px;
+    top: -228px;
+}
+.stack:last-child .in-game:nth-child(8) .stone{
+    left: -77px;
+    top: -148px;
+}
+.stack:last-child .in-game:nth-child(9) .stone{
+    left: -157px;
+    top: -308px;
+}
+.stack:last-child .in-game:nth-child(10) .stone{
+    left: -77px;
+    top: -148px;
+}
+.stack:last-child .in-game:nth-child(11) .stone{
+    left: -77px;
+    top: -228px;
+}
+.stack:last-child .in-game:nth-child(12) .stone{
+    left: -157px;
+    top: -388px;
+}

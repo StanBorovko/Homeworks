@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkers</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/png" href="ico/Toys_Games_Chess_board-512.png"/>
+</head>
+<body>
+    <!--main>.inner>section.board>.letters+.field>.row*8>.cell*4^^.letters-->
+    <main>
+        <div class="inner">
+            <section class="stack">
+                <div class="stack-row">
+                    <div class="cell">
+                        <div class="stone white"></div>
+                    </div>
+                    <div class="cell">
+                        <div class="stone white"></div>
+                    </div>
+                    <div class="cell">
+                        <div class="stone white"></div>
+                    </div>
+                    <div class="cell">
+                        <div class="stone white"></div>
+                    </div>
+                    <div class="cell in-game">
+                        <div class="stone white"></div>
+                    </div>
+                    <div class="cell in-game">
+                        <div class="stone white"></div>
+                    </div>
+                    <div class="cell in-game">
+                        <div class="stone white"></div>
+                    </div>
+                    <div class="cell in-game">
+                        <div class="stone white"></div>
+                    </div>
+                    <div class="cell in-game">
+                        <div class="stone white"></div>
+                    </div>
+                    <div class="cell in-game">
+                        <div class="stone white"></div>
+                    </div>
+                    <div class="cell in-game">
+                        <div class="stone white"></div>
+                    </div>
+                    <div class="cell in-game">
+                        <div class="stone white"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="board">
+                <div class="letters">
+                    <div  class="cell">
+                        <span>A</span></div>
+                    <div  class="cell">
+                        <span>B</span></div>
+                    <div  class="cell">
+                        <span>C</span></div>
+                    <div  class="cell">
+                        <span>D</span></div>
+                    <div  class="cell">
+                        <span>E</span></div>
+                    <div  class="cell">
+                        <span>F</span></div>
+                    <div  class="cell">
+                        <span>G</span></div>
+                    <div  class="cell">
+                        <span>H</span></div>
+                </div>
+                <div class="numbers">
+                    <div class="cell">
+                        <span>1</span></div>
+                    <div class="cell">
+                        <span>2</span></div>
+                    <div class="cell">
+                        <span>3</span></div>
+                    <div class="cell">
+                        <span>4</span></div>
+                    <div class="cell">
+                        <span>5</span></div>
+                    <div class="cell">
+                        <span>6</span></div>
+                    <div class="cell">
+                        <span>7</span></div>
+                    <div class="cell">
+                        <span>8</span></div>
+                </div>
+                <div class="numbers">
+                    <div class="cell">
+                        <span>1</span></div>
+                    <div class="cell">
+                        <span>2</span></div>
+                    <div class="cell">
+                        <span>3</span></div>
+                    <div class="cell">
+                        <span>4</span></div>
+                    <div class="cell">
+                        <span>5</span></div>
+                    <div class="cell">
+                        <span>6</span></div>
+                    <div class="cell">
+                        <span>7</span></div>
+                    <div class="cell">
+                        <span>8</span></div>
+                </div>
+                <div class="field">
+                    <div class="row">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                </div>
+                <div class="letters">
+                    <div  class="cell">
+                        <span>A</span></div>
+                    <div  class="cell">
+                        <span>B</span></div>
+                    <div  class="cell">
+                        <span>C</span></div>
+                    <div  class="cell">
+                        <span>D</span></div>
+                    <div  class="cell">
+                        <span>E</span></div>
+                    <div  class="cell">
+                        <span>F</span></div>
+                    <div  class="cell">
+                        <span>G</span></div>
+                    <div  class="cell">
+                        <span>H</span></div>
+                </div>
+            </section>
+            <!--section.stack>.stack-row>.cell*12>.stone.black-->
+            <section class="stack">
+                <div class="stack-row">
+                    <div class="cell">
+                        <div class="stone black"></div>
+                    </div>
+                    <div class="cell">
+                        <div class="stone black"></div>
+                    </div>
+                    <div class="cell">
+                        <div class="stone black"></div>
+                    </div>
+                    <div class="cell in-game">
+                        <div class="stone black"></div>
+                    </div>
+                    <div class="cell in-game">
+                        <div class="stone black"></div>
+                    </div>
+                    <div class="cell in-game">
+                        <div class="stone black"></div>
+                    </div>
+                    <div class="cell in-game">
+                        <div class="stone black"></div>
+                    </div>
+                    <div class="cell in-game">
+                        <div class="stone black"></div>
+                    </div>
+                    <div class="cell in-game">
+                        <div class="stone black"></div>
+                    </div>
+                    <div class="cell in-game">
+                        <div class="stone black"></div>
+                    </div>
+                    <div class="cell in-game">
+                        <div class="stone black"></div>
+                    </div>
+                    <div class="cell in-game">
+                        <div class="stone black"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
