@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nike dark</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <div class="inner clearfix">
+        <section class="card">
+            <a href="#" class="link card__logo">
+                <img src="img/logo.png" alt="Nike logo" class="card__logo-image">
+            </a>
+            <div class="item-view">
+                <img src="img/Nike-SB-Stefan-Janoski-Max.png" alt="Item image" class="item-view__item-image">
+                <img src="img/bullets.png" alt="Bullet image"
+                     class="item-view__item-image item-view__item-image--bullet">
+            </div>
+            <div class="specification">
+                <h2 class="specification__title custom-font-100">Nike SB Stefan Janoski Max</h2>
+                <h2 class="specification__title specification__title--subtitle custom-font-100">Unisex skateboarding shoe</h2>
+                <form action="/" class="order-form">
+                    <div class="order-form__stars-rate clearfix">
+                        <input type="radio" name="star01" id="star01" class="order-form__hidden">
+                        <label for="star01" class="order-form__star"></label>
+                        <input type="radio" name="star02" id="star02" class="order-form__hidden">
+                        <label for="star02" class="order-form__star"></label>
+                        <input type="radio" name="star03" id="star03" class="order-form__hidden">
+                        <label for="star03" class="order-form__star"></label>
+                        <input type="radio" name="star04" id="star04" class="order-form__hidden">
+                        <label for="star04" class="order-form__star"></label>
+                        <input type="radio" name="star05" id="star05" class="order-form__hidden">
+                        <label for="star05" class="order-form__star"></label>
+                    </div>
+                    <div class="order-form__selectors">
+                        <select name="size" id="size" class="order-form__size custom-font-100">
+                            <option value="none" class="order-form__option" selected disabled>Size</option>
+                            <option value="" class="order-form__option">8</option>
+                            <option value="" class="order-form__option">9</option>
+                            <option value="" class="order-form__option">10</option>
+                            <option value="" class="order-form__option">11</option>
+                        </select>
+                        <select name="quality" id="quality" class="order-form__quality custom-font-100">
+                            <option value="none" class="order-form__option" selected disabled>
+                                Qty
+                            </option>
+                            <option value="black" class="order-form__option">black</option>
+                            <option value="white" class="order-form__option">white</option>
+                            <option value="yellow" class="order-form__option">yellow</option>
+                            <option value="cyan" class="order-form__option">cyan</option>
+                        </select>
+                    </div>
+                    <label for="size"></label>
+                    <label for="quality"></label>
+                    <input type="button" value="Add to cart" class="order-form__add-button custom-font-100">
+                </form>
+            </div>
+        </section>
+    </div>
+</main>
+</body>
+</html>

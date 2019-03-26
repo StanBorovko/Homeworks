@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:100');
+body {
+    background: url("img/main-bg.jpg"), no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+.inner {
+    width: 685px;
+    height: 390px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111a28;
+    border-radius: 10px;
+}
+.clearfix:before,
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.link {
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+.custom-font-100{
+    font-family: "Museo Sans Rounded", 'Kanit', Arial, sans-serif;
+    font-weight: 100;
+}
+.card {
+    position: relative;
+}
+.card__logo {
+    position: absolute;
+    top: 22px;
+    left: 20px;
+    z-index: 1;
+}
+.item-view {
+    width: 65%;
+    float: left;
+    position: relative;
+}
+.item-view:before {
+    content: '';
+    display: inline-block;
+    padding-top: 100%;
+}
+.item-view__item-image {
+    position: absolute;
+    margin: auto;
+    top: -39px;
+    bottom: 0;
+    left: -45px;
+    right: 0;
+}
+.item-view__item-image--bullet {
+    margin: 75% auto 0;
+    top: 21px;
+    left: -25px;
+}
+.specification {
+    color: #ffffff;
+    display: inline-block;
+    width: 35%;
+}
+.specification__title {
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 70px;
+    margin-bottom: 0;
+}
+.specification__title--subtitle{
+    font-size: 14px;
+    margin-top: 4px;
+    color: #e1e1e1;
+}
+.stars{
+    display: block;
+    margin-top: 24px;
+}
+.order-form {
+    margin-top: 15px;
+}
+.order-form__stars-rate {
+    display: inline-block;
+}
+
+.order-form__hidden {
+    display: none;
+}
+.order-form__star {
+    float: right;
+    width: 12px;
+    height: 12px;
+    /*display: inline-block;*/
+    margin-right: 1px;
+    background: url("img/star-not-selected.png");
+    cursor: pointer;
+    /*position: relative;*/
+    /*z-index: 1;*/
+}
+.order-form__stars-rate input:checked ~ label,
+.order-form__stars-rate label:hover,
+.order-form__stars-rate label:hover ~ label {
+    background: url("img/star-selected.png");
+}
+.order-form__selectors{
+    display: block;
+    margin-top: 24px;
+}
+.order-form__size,
+.order-form__quality {
+    padding-left: 12px;
+    width: 69px;
+    height: 32px;
+    color: #ffffff;
+    background: #111a28 url("img/select-arrow.png"); /*Ломается при попытке слить в один стиль background */
+    background-repeat: no-repeat;
+    background-position: 85% 50%;
+    border: 1px solid #e1e1e1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.order-form__size:focus,
+.order-form__quality:focus {
+    outline: none;
+}
+.order-form__add-button{
+    margin-top: 28px;
+    width: 185px;
+    height: 40px;
+    color: #ffffff;
+    border: 1px solid #e1e1e1;
+    background: #111a28;
+}
