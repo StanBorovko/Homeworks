@@ -46,7 +46,7 @@
     padding-top: 100%;
 }
 /********/
-.inner{
+.ba-container{
     width: 1000px;
     margin: 0 auto;
 }
@@ -157,16 +157,16 @@ main{
 .field .cell{
     background: #4f2300;
 }
-.row:nth-child(even) .cell{
+.ba-grid:nth-child(even) .cell{
     margin-right: 80px;
 }
-.row:nth-child(odd) .cell{
+.ba-grid:nth-child(odd) .cell{
     margin-left: 80px;
 }
-.row:first-child .cell:last-child{
+.ba-grid:first-child .cell:last-child{
     border-radius: 0 11px 0 0;
 }
-.row:last-child .cell:first-child{
+.ba-grid:last-child .cell:first-child{
     border-radius: 0 0 0 11px;
 }
 /*******/

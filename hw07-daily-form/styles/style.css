@@ -32,7 +32,7 @@ main{
     background: #ffffff;
     border-radius: 5px;
 }
-.inner{
+.ba-container{
     width: 400px;
 }
 h1{
@@ -53,7 +53,7 @@ h1:before{
     vertical-align: middle;
     margin-right: 10px;
 }
-.inner div{
+.ba-container div{
     margin: 11px 0 20px;
 }
 a{
