@@ -9,15 +9,23 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
-a, h1, h2, div {
+a, h1, h2, div, .row__title, .row__subtitle, .row__text {
     color: #60606e;
 }
-a, h1, h2 {
-    font-family: 'Montserrat', sans-serif;
+a, h1, h2, .row__title, .row__subtitle {
     text-transform: uppercase;
 }
-div {
+a, h1, .row__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+h2, .row__subtitle {
     font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+div, .row__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
 .clearfix:before,
@@ -56,4 +64,28 @@ div {
     margin-bottom: 164px;
     text-align: center;
 }
-
+.ba-grid:before,
+.ba-grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.ba-grid {
+    display: inline-block;
+    width: 100%;
+    /*float: left;*/
+    box-sizing: border-box;
+}
+.row__col--2 {
+    width: 50%;
+}
+.row__col--3 {
+    width: 33.333%;
+}
+.row__col--8 {
+    width: 12.5%;
+}
+[class^='row__col'] {
+    float: left;
+    box-sizing: border-box;
+}

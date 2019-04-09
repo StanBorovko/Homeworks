@@ -1,0 +1,477 @@
+//@import "sb-normalize.css";
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700');
+//font-family: 'Josefin Sans', sans-serif;
+@font-face {
+  font-family: 'Aleo'; /* Имя шрифта */
+  src: url("../fonts/Aleo-Font/Desktop OTF/Aleo-Regular.otf"); /* Путь к файлу со шрифтом */
+}
+
+$text-color: #fff;
+$form-border-color: $text-color;
+$button-color-blue: #5474fd;
+$button-color-red: #fd7454;
+$header-bg-blue: $button-color-blue;
+$placeholder-color: #999999;
+$input-color: #292929;
+$s02-bg-color: #333333;
+$footer-bg-color: #232323;
+@mixin setFont($font:'Arial', $color:#000, $size:18px, $weigth:400, $spacing:normal, $line-height:26px) {
+  //$spacing in em
+  font: $weigth $size $font, sans-serif;
+  line-height: $line-height;
+  letter-spacing: $spacing;
+  color: $color;
+}
+
+@mixin setBackground($url, $color:#000, $cover:cover, $repeat:no-repeat) {
+  //$url should be in ""
+  background: $color url($url) $repeat;
+  background-size: $cover;
+}
+
+@mixin setFlex($justify-content: flex-start, $align-item: center, $direction: row) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-item;
+  flex-direction: $direction;
+}
+
+@mixin setBlackBox {
+  & .inner {
+    height: 100%;
+    @include setFlex(center, flex-start, column);
+  }
+}
+
+@mixin cfx() {
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin hover-shadow() {
+  &:hover {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
+  }
+}
+
+@mixin hover($bg) {
+  &:hover {
+    background: lighten($bg, 10);
+    -webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@mixin active() {
+  &:active {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@mixin makeColorButton($color: darkred, $padding:25px 35px) {
+  display: inline-block;
+  padding: $padding;
+  background: $color;
+  color: #fff;
+  text-transform: uppercase;
+  border: 0;
+  @include hover($color);
+  @include active();
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:focus {
+  border: 0;
+}
+
+a {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+
+.arrow-down {
+  fill: $text-color;
+}
+
+.inner {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.s01 {
+  @include setBackground("../img/s01-bg.jpg");
+  height: 100vh;
+  min-height: 500px;
+  text-align: center;
+  border: 1px solid transparent;
+
+  &__title {
+    @include setFont('Josefin Sans', $text-color, 48px, 700, 0.07em);
+    text-transform: uppercase;
+    margin-top: 265px;
+  }
+
+  &__subtitle {
+    @include setFont('Josefin Sans', $text-color, 22px, 400, 0.25em);
+    margin: 15px 0 45px;
+  }
+
+  &__scroll {
+    @include setFont('Josefin Sans', $text-color, 14px, 400, 0.2em, 16px);
+    @include hover-shadow();
+    @include active();
+    display: block;
+    margin-top: 118px;
+  }
+}
+
+.search {
+  display: inline-block;
+  width: 652px;
+  height: 62px;
+  border: 1px solid $form-border-color;
+  background: $form-border-color;
+  text-align: left;
+  padding: 0;
+
+  &__input {
+    width: calc(100% - 160px);
+    height: 100%;
+    border: 0;
+    border-left: 3px solid transparent;
+    //vertical-align: middle;
+    text-align: center;
+
+    @include setFont('Josefin Sans', $input-color, 14px, 400, 0.2em);
+
+    &:focus {
+      outline: none;
+      border-left: 3px solid $button-color-blue;
+    }
+
+    &::placeholder {
+      text-align: center;
+      color: $placeholder-color
+    }
+
+    &:valid {
+      background: rgba(84, 116, 253, 0.1);
+    }
+  }
+
+  &__button {
+    width: 150px;
+    height: 100%;
+    //vertical-align: middle;
+    float: right;
+    @include setFont('Aleo', $text-color, 14px, 400, 0.2em);
+    @include makeColorButton($button-color-blue, 15px 20px);
+
+    & svg {
+      fill: $text-color;
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.head {
+  height: 80px;
+  //position: -webkit-sticky;
+  //position: sticky;
+  top: 0;
+  background: $header-bg-blue;
+
+  & .inner {
+    height: 100%;
+    @include setFlex(space-between)
+    //display: flex;
+    //justify-content: space-between;
+    //align-items: center;
+  }
+
+  &__logo {
+    @include setFont('Josefin Sans', $text-color, 24px, 700, 0.07em);
+    @include hover-shadow();
+    @include active();
+    text-transform: uppercase;
+    padding-left: 26px;
+  }
+
+  & .menu {
+    float: right;
+    margin-right: 30px;
+  }
+}
+
+.menu {
+  &__item {
+    @include setFont('Aleo', $text-color, 14px, 400);
+    @include hover-shadow();
+    @include active();
+    text-transform: uppercase;
+    margin-left: 38px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.s02 {
+  @include setBackground("../img/s02-bg.jpg", $s02-bg-color, 100% 67%);
+  height: 1020px;
+  border: 1px solid $s02-bg-color;
+
+  & .inner {
+    height: 100%;
+    //@include setFlex(space-around)
+    //display: flex;
+    //justify-content: space-around;
+    //align-items: center;
+  }
+
+  & .row {
+    padding: 113px 30px;
+
+    & [class^='col'] {
+      //@include setFlex(center, flex-start, column);
+      @include setFont('Josefin Sans', $text-color, 18px, 400);
+      //text-align: center;
+    }
+  }
+
+  &__title {
+    @include setFont('Aleo', $text-color, 36px, 400);
+    padding: 90px 0 0 0;
+  }
+
+  &__text {
+    @include setFont('Josefin Sans', $text-color, 16px, 400, 0.1em);
+    padding: 67px 0 0 0;
+  }
+
+  &__button {
+    @include makeColorButton($button-color-blue, 17px 31px);
+    margin: 44px 0 0 0;
+  }
+
+  &__img:first-child {
+    margin-left: 12%;
+  }
+
+  &__img:last-child {
+    margin-left: 35%;
+  }
+
+  &__foot {
+    @include setBackground("../img/s02-footer-bg.svg", $s02-bg-color, auto);
+    background-position: 50% 20%;
+    & .row {
+      padding: 100px 30px;
+      & [class^='col'] {
+        //@include setFlex(center, flex-start, column);
+        @include setFont('Aleo', $text-color, 28px, 400, 0.05em);
+        text-align: center;
+      }
+    }
+  }
+
+  &__svg {
+    fill: $button-color-blue;
+    background: $s02-bg-color;
+
+    &--red {
+      fill: $button-color-red;
+    }
+  }
+
+  &__label {
+    margin: 28px 0 0 0;
+  }
+}
+
+.row {
+  width: 100%;
+  @include cfx();
+
+  &--t {
+    width: 195px;
+    margin: 0 auto;
+  }
+
+  & [class^='col'] {
+    padding: 0 15px;
+    display: inline-block;
+    float: left;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  & .col-2 {
+    width: 50%;
+  }
+
+  & .col-3 {
+    width: 33.333%;
+  }
+
+  & .col-5 {
+    width: 20%;
+    padding: 0;
+  }
+}
+
+.s03 {
+  height: 700px;
+  @include setBackground("../img/s03-bg.jpg");
+  text-align: left;
+  @include setBlackBox();
+}
+
+.s04 {
+  height: 700px;
+  @include setBackground("../img/s04-bg.jpg");
+  @include setBlackBox();
+}
+
+.black-box {
+  width: 540px;
+  height: 370px;
+  padding: 48px 30px;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: relative;
+  top: 65px;
+  left: 30px;
+
+  &--right {
+    align-self: flex-end;
+    left: -30px;
+  }
+
+  &__subtitle {
+    @include setFont('Josefin Sans', $text-color, 18px, 400, 0.14em);
+  }
+
+  &__title {
+    @include setFont('Josefin Sans', $text-color, 18px, 700);
+    margin: 20px 0;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    @include setFont('Josefin Sans', $text-color, 14px, 400);
+    text-align: justify;
+  }
+
+  &__button {
+    @include makeColorButton($button-color-blue, 20px 67px);
+    margin: 45px 0 0 0;
+  }
+}
+
+.s05 {
+  height: 730px;
+  border: 1px solid $footer-bg-color;
+  text-align: center;
+  @include setBackground("../img/s05-bg.jpg");
+
+  &__title {
+    @include setFont('Aleo', $text-color, 36px, 400, 0.01em);
+    margin: 120px 0 0 0;
+  }
+
+  &__content {
+    width: 95%;
+    margin: 100px auto 0;
+    background: #333333;
+    @include cfx();
+  }
+
+  &__image {
+    float: left;
+  }
+
+  &__info {
+    padding: 50px 50px 0;
+    text-align: left;
+    float: right;
+    width: 59%;
+  }
+
+  &__author {
+    @include setFont('Josefin Sans', $text-color, 20px);
+    text-transform: uppercase;
+  }
+
+  &__text {
+    @include setFont('Josefin Sans', $text-color, 16px, 400, -0.06em);
+    margin: 30px 0 0 0;
+
+    & .fas {
+      color: $button-color-blue;
+      display: inline-block;
+      font-size: 18px;
+      position: relative;
+      bottom: 7px;
+    }
+  }
+}
+
+.foot {
+  height: 270px;
+  text-align: center;
+  border: 1px solid $footer-bg-color;
+  background: $footer-bg-color;
+
+  &__title {
+    @include setFont('Josefin Sans', $text-color, 23px, 700, 0.15em);
+    margin: 120px 0 0 0;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    @include setFont('Josefin Sans', $text-color, 16px, 400, 0.05em);
+    margin: 5px 0 0 0;
+  }
+
+  &__social--blue * {
+    color: $button-color-blue;
+  }
+
+  & .fab {
+    font-size: 16px;
+    margin: 25px 0 0 0;
+    color: $text-color;
+    @include hover-shadow();
+    @include active();
+  }
+
+  & .fa-linkedin-in {
+    color: $button-color-blue;
+  }
+}

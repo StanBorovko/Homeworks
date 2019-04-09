@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,700,900');
+//font-family: 'Pacifico', cursive;
+//font-family: 'Raleway', sans-serif;
+@import "cahee-normalize.css";
+$not-absolutely-black: #262626;
+$active-menu-color: #ff6033;
+$section01-bg-color: #f9f8fb;
+$section01-button-color: #ff6033;
+$footer-bg-color: #262626;
+$footer-text-color: #b9b9b9;
+$love-color: #ff2b58;
+@mixin setFont($font:'Arial', $color:#000, $size:18px, $weigth:400, $line-height:25px) {
+  font: $weigth $size $font, sans-serif;
+  line-height: $line-height;
+  color: $color;
+}
+@mixin cfx() {
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+@mixin hover($bg) {
+  &:hover {
+    background: lighten($bg, 10);
+  }
+}
+@mixin makeColorButton($color: darkred, $padding:20px 25px) {
+  display: inline-block;
+  padding: $padding;
+  background: $color;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 5px;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+  @include hover($color);
+}
+main {
+  background: $section01-bg-color url("../img/s01-bg.jpg") no-repeat top center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.inner {
+  width: 1175px;
+  height: 100%;
+  margin: 0 auto;
+}
+.lovemark {
+  color: $love-color;
+}
+header {
+  padding-top: 45px;
+  @include cfx();
+  & .logo {
+    float: left;
+  }
+  & nav {
+    float: right;
+    & a {
+      @include setFont('Raleway', $not-absolutely-black, 16px, 700);
+      text-transform: uppercase;
+      margin-left: 36px;
+      border-top: 3px solid transparent;
+      &:hover {
+        border-top-color: $active-menu-color;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+.s01 {
+  height: 100vh;
+  min-height: 500px;
+  & .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  & .title {
+    @include setFont('Raleway', $not-absolutely-black, 60px, 900);
+    text-transform: capitalize;
+    margin-top: 250px;
+  }
+  & .text {
+    @include setFont('Raleway', $not-absolutely-black, 17px, 300, 27px);
+    margin: 34px 0;
+  }
+  & .color-button {
+    @include makeColorButton($section01-button-color);
+  }
+  & .scroll {
+    align-self: center;
+    margin-bottom: 60px;
+  }
+}
+.foot {
+  background: $footer-bg-color;
+  & .inner {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & div {
+      @include setFont('Raleway', $footer-text-color, 16px, 300);
+    }
+    & svg {
+      fill: $footer-text-color;
+    }
+  }
+
+}
