@@ -4,6 +4,8 @@
 @font-face {
   font-family: 'Aleo'; /* Имя шрифта */
   src: url("../fonts/Aleo-Font/Desktop OTF/Aleo-Regular.otf"); /* Путь к файлу со шрифтом */
+  font-weight: 400;
+  font-style: normal;
 }
 
 $text-color: #fff;
@@ -15,9 +17,10 @@ $placeholder-color: #999999;
 $input-color: #292929;
 $s02-bg-color: #333333;
 $footer-bg-color: #232323;
-@mixin setFont($font:'Arial', $color:#000, $size:18px, $weigth:400, $spacing:normal, $line-height:26px) {
+
+@mixin setFont($font:'Arial', $color:#000, $size:18px, $weight:400, $spacing:normal, $line-height:26px) {
   //$spacing in em
-  font: $weigth $size $font, sans-serif;
+  font: $weight $size $font, sans-serif;
   line-height: $line-height;
   letter-spacing: $spacing;
   color: $color;
@@ -55,6 +58,15 @@ $footer-bg-color: #232323;
 @mixin hover-shadow() {
   &:hover {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
+  }
+}
+
+@mixin hover-shadow-box() {
+  &:hover {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
+    & svg {
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.75));
+    }
   }
 }
 
@@ -135,7 +147,7 @@ a {
 
   &__scroll {
     @include setFont('Josefin Sans', $text-color, 14px, 400, 0.2em, 16px);
-    @include hover-shadow();
+    @include hover-shadow-box();
     @include active();
     display: block;
     margin-top: 118px;
@@ -156,7 +168,6 @@ a {
     height: 100%;
     border: 0;
     border-left: 3px solid transparent;
-    //vertical-align: middle;
     text-align: center;
 
     @include setFont('Josefin Sans', $input-color, 14px, 400, 0.2em);
@@ -179,7 +190,6 @@ a {
   &__button {
     width: 150px;
     height: 100%;
-    //vertical-align: middle;
     float: right;
     @include setFont('Aleo', $text-color, 14px, 400, 0.2em);
     @include makeColorButton($button-color-blue, 15px 20px);
@@ -195,17 +205,15 @@ a {
 
 .head {
   height: 80px;
-  //position: -webkit-sticky;
-  //position: sticky;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
+  z-index: 1;
   background: $header-bg-blue;
 
   & .inner {
     height: 100%;
     @include setFlex(space-between)
-    //display: flex;
-    //justify-content: space-between;
-    //align-items: center;
   }
 
   &__logo {
@@ -243,19 +251,13 @@ a {
 
   & .inner {
     height: 100%;
-    //@include setFlex(space-around)
-    //display: flex;
-    //justify-content: space-around;
-    //align-items: center;
   }
 
   & .row {
     padding: 113px 30px;
 
     & [class^='col'] {
-      //@include setFlex(center, flex-start, column);
       @include setFont('Josefin Sans', $text-color, 18px, 400);
-      //text-align: center;
     }
   }
 
@@ -288,7 +290,6 @@ a {
     & .row {
       padding: 100px 30px;
       & [class^='col'] {
-        //@include setFlex(center, flex-start, column);
         @include setFont('Aleo', $text-color, 28px, 400, 0.05em);
         text-align: center;
       }
